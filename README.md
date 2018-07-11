@@ -42,14 +42,21 @@ How to use
 
         f = Firebase('https://SampleChat.firebaseIO-demo.com/message_list')
         r = f.push({'user_id': 'wilma', 'text': 'Hello'})
-
     The response `r` is a dictionary containing Firebase's REST response:
 
-        {"name":"-INOQPH-aV_psbk3ZXEX"}
+           {"name":"-INOQPH-aV_psbk3ZXEX"}
+
+    For example, to push a list of data using authentication:
+
+        f = Firebase('http://SampleChat.firebaseIO-demo.com/', auth_token="<my_firebase_auth_token>")
+        r = f.push({'user_id': 'wilma', 'text': 'Hello'})
+        
+    The response `r` is a dictionary containing Firebase's REST response:
+
+           {"name":"-INOQPH-aV_psbk3ZXEX"}
 
 
 License
 -------
 
 django-firebase is BSD licensed.
-
